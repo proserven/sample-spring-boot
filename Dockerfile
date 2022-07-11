@@ -11,5 +11,5 @@ USER root
 
 #ENTRYPOINT ["java","-jar","app.jar"]
 
-ADD target/project0.jar app.jar
+ADD build/libs/spring-boot.jar app.jar
 ENTRYPOINT [ "java" , "-jar" , "/app.jar"]
