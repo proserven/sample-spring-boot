@@ -8,8 +8,6 @@ pipeline {
     stages {
         stage('build') {
             agent {
-                id = 'local'
-                label = 'build'
                 docker { image 'openjdk:11-jdk' }
             }
             steps {
