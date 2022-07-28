@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    //agent none
         // environment {
         // ENV_DOCKER = credentials('dockerhub')
         // DOCKERIMAGE = "dummy/dummy"
