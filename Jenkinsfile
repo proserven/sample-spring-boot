@@ -1,10 +1,10 @@
 pipeline {
-    //agent none
-        // environment {
-        // ENV_DOCKER = credentials('dockerhub')
-        // DOCKERIMAGE = "dummy/dummy"
-        // EKS_CLUSTER_NAME = "demo-cluster"
-    // }
+    agent none
+        environment {
+        ENV_DOCKER = credentials('dockerhub')
+        DOCKERIMAGE = "dummy/dummy"
+        EKS_CLUSTER_NAME = "demo-cluster"
+    }
     stages {
         stage('build') {
             agent {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('sonarqube') {
         agent {
-            docker { image 'sonarqube' } }
+            docker { image '<some sonarcli image>' } }
             steps {
                 sh 'echo scanning!'
             }
@@ -36,5 +36,4 @@ pipeline {
                 sh 'echo deploy to kubernetes'               
             }
     }
-}
 }
