@@ -1,10 +1,10 @@
 pipeline {
     agent any
-        environment {
-        ENV_DOCKER = credentials('dockerhub')
-        DOCKERIMAGE = "proserven/sample-spring-boot"
-        EKS_CLUSTER_NAME = "demo-cluster"
-    }
+    //     environment {
+    //     // // ENV_DOCKER = credentials('dockerhub')
+    //     // DOCKERIMAGE = "proserven/sample-spring-boot"
+    //     // EKS_CLUSTER_NAME = "demo-cluster"
+    // }
     stages {
         stage('clean_up') {
             steps {  
