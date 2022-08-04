@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
         environment {
         ENV_DOCKER = credentials('dockerhub')
         DOCKERIMAGE = "proserven/sample-spring-boot"
