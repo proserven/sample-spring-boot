@@ -6,11 +6,10 @@ pipeline {
         EKS_CLUSTER_NAME = "demo-cluster"
     }
     stages {
-        stages {
-        stage("Clean Up") {
+        stage('clean_up') {
             steps {  
                 deleteDir()
-            }
+                }
         }
         stage('build') {
             agent {
@@ -41,7 +40,7 @@ pipeline {
             steps {
                 sh 'echo deploy to kubernetes'               
             }
-    }
-}
+        }      
+    }   
 
 }
