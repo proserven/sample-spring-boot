@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: springboot-sample
-          image: <Your Docker Image>:<Your Image Tag>
+          image: proserven/sample-spring-boot #added image
           ports:
             - containerPort: 8080
 ---

@@ -2,7 +2,7 @@ pipeline {
     agent none
         environment {
         ENV_DOCKER = credentials('dockerhub')
-        DOCKERIMAGE = "dummy/dummy"
+        DOCKERIMAGE = "proserven/sample-spring-boot"
         EKS_CLUSTER_NAME = "demo-cluster"
     }
     stages {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('sonarqube') {
         agent {
-            docker { image '<some sonarcli image>' } }
+            docker { image 'sonarsource/sonar-scanner-cli' } }
             steps {
                 sh 'echo scanning!'
             }
